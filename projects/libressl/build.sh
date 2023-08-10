@@ -21,7 +21,9 @@ cd $SRC/
 tar jxf boost_1_74_0.tar.bz2
 cd boost_1_74_0/
 CFLAGS="" CXXFLAGS="" ./bootstrap.sh
+echo 'bbbbbbbbbbbbbbbbefore b2'
 CFLAGS="" CXXFLAGS="" ./b2 headers
+echo 'aaaaaaaaaaaaaaaaafter b2'
 cp -R boost/ /usr/include/
 
 mkdir -p $WORK/libressl
